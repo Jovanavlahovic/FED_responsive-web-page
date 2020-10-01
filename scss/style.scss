@@ -131,3 +131,33 @@ main{
     }
 }
 
+.pricing p{
+    padding: 1em 0;
+    color: $color-font-gray;
+}
+
+table{
+    margin: 2em 0;
+    width: 100%;
+    border-collapse: collapse;
+
+    td, .orange, .gray{
+        border: 1px solid $color-font-gray;
+    }
+
+    th, td{
+        padding: 1em;
+    }
+
+    .gray{
+        background-color: $color-header;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .orange{
+        background-color: $color-orange;
+        color: #fff;
+    }
+}
+
