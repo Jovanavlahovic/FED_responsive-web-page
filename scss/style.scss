@@ -67,8 +67,67 @@ main{
     
     h1,h3{
         font-weight: normal;
+    }    
+}
+
+.btn-section{
+    text-align: right;
+
+    ul{
+        list-style: none;
+
+        li{
+            display: inline-block;
+            padding: 0.75em;
+            border: 1px solid $color-font-gray;
+            border-radius: 15px;
+            margin-left: 1em;
+
+            a{
+                text-decoration: none;
+                color: $color-font-gray;
+            }
+
+            &:hover{
+                background-color: $color-font-gray;
+                cursor: pointer;
+
+                a{color: #fff;}
+            }
+        }
+    }
+}
+
+.img-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: $color-gray-bkg;
+}    
+.img-box{
+    flex-basis: 30%;
+    height: 20em;
+    margin: 0.5em;
+
+    .text{
+        text-align: left;
+        display: none;
+        background-color: rgba(#fff, 0.5);
+        padding: 2em 1em;
+        color: #000;
     }
 
-    
-        
+    &:hover{
+        .text{
+            display: block;
+        }
+    }
 }
+
+@for $i from 1 through 6 {
+    .box#{$i}{
+        background-image: url('../slike/#{$i}.jpg');
+        background-size: cover;
+    }
+}
+
