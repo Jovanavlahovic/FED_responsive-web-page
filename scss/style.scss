@@ -8,7 +8,7 @@
     font-family: $font;
 }
 
-section, main{
+section, main, .contact{
     padding: 2em 10em;
     text-align: center;
 }
@@ -16,6 +16,7 @@ section, main{
 h2{
     color: $color-font-gray;
     text-transform: uppercase;
+    padding: 1em 0;
 }
 
 nav{
@@ -161,3 +162,39 @@ table{
     }
 }
 
+.contact{
+    background-color: $color-gray-bkg;
+    @include clearfix;
+
+    .right, .left{
+        width: 49%;
+    }
+
+    .right{
+        float: right;
+    }
+
+    .left{
+        float: left;
+    }
+}
+
+form{
+    margin-top: 10%;
+    padding: 1.5em;
+    background-color: $color-orange;
+
+    select{
+        width: 28%;
+        margin-right: 4px;
+    }
+
+    #name{
+        width: 70%;
+    }
+
+    #email, textarea{
+        margin-top: 8px;
+        width: 100%;
+    }
+}
